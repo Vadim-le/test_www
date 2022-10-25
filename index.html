@@ -16,8 +16,7 @@
             font-size: 20px;
             border-radius: 100px;
             border: 4px solid rgb(6, 205, 152);
-            display:flex;
-            flex-direction: column;
+            
         }
         /*правило для элементов относящихся к классу a_footer*/
         .a_footer {
@@ -27,30 +26,30 @@
             text-align: center;
             padding: 20px 10px 0px 0px;
         }
-        .flex-container {
-            /*генерирует flex-контейнер уровня блока*/
-            display: -webkit-flex; 
-            display: flex; 
-        }
         /*подключаем картинку для шапки*/
         header {
+            position: relative;
             background-size: 100%;
             width: 75%;
-            height: 150px;
+            height: 200px;
             border-radius: 100px; /* скругление углов блока */
-            padding: 16px; /* внутренние поля */
-            margin: 16px auto; /* внешние отступы */
+            padding: 10px; /* внутренние поля */
+            margin: 10px auto; /* внешние отступы */
             color: rgb(236, 16, 16);
-            text-align: center;
+            text-align:center;
             border: 2px solid rgb(49, 50, 49);
             color: lime;
             background: linear-gradient(-45deg, #1316c4, #000000);
             text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
+            
+            max-width: 960px;
+            min-width: 200px;
+
             display: flex;
+            flex-wrap: wrap;
+            align-items:  flex-end;
             justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-            align-items: flex-start;
+            box-sizing: border-box;
         }
         adress {
             text-align: center;
@@ -60,21 +59,39 @@
             border: 2px solid rgb(6, 205, 152);
             background-color: rgb(5, 34, 52);
             border-radius: 100px; /* скругление углов блока */
-            padding: 16px; /* внутренние поля */
-            margin: 120px auto; /* внешние отступы */
-            margin-bottom: 40px;
+            padding: 10px; /* внутренние поля */
+            margin: 0 auto; /* внешние отступы */
+            margin-top: 150px;
+            margin-bottom: 10px;
             text-align: center;
             font-size: 24px;
             background: rgb(13, 2, 39);
             text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px lime, 0 0 35px lime, 0 0 40px lime, 0 0 50px lime, 0 0 75px lime; 
+            max-width: 960px;
+            min-width: 200px;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items:  flex-end;
+            justify-content: space-between;
+            box-sizing: border-box;
         }
-        .container {   
+        .container {  
+            position: relative; 
             width: 60%;
             border: 2px solid rgb(6, 205, 152);
             background-color: rgb(5, 34, 52);
             border-radius: 50px; /* скругление углов блока */
             padding: 16px; /* внутренние поля */
             margin: 16px auto; /* внешние отступы */
+            max-width: 960px;
+            min-width: 200px;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items:  flex-end;
+            justify-content: space-between;
+            box-sizing: border-box;
         }
         .container img {
             float: left; /* обтекание слева */
@@ -87,18 +104,30 @@
             font-size: 18px;
             margin-right: 15px;
         }
+
         .wrap {
-         width: 1310px;/*фиксируем ширину обертки*/
+            
          margin: 0 auto;/*центрируем ее*/
          text-align: center;
-         height: 120px;/*Задаем высоту обертки*/
+         height: 200px;/*Задаем высоту обертки*/
+         max-width: 1300px;
+         min-width: 300px;
+        
+        margin-bottom: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        
         }
         
         .bblock {
+                position: relative;
                 border: 2px solid rgb(6, 205, 152);
-                float: left; /*Задаем обтекание*/
-                line-height: 120px;/*Высота строки +  верт. центрирования текста*/
-                font-size: 38px;
+
+                line-height: 80px;/*Высота строки +  верт. центрирования текста*/
+                font-size: 30px;
                 background: rgb(9, 37, 65);
                 color: white;
                 width: 310px; /*Фиксируем ширину блока*/
@@ -107,7 +136,8 @@
                 border-radius: 50px; /* скругление углов блока */
                 background: black;
                 text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px lime, 0 0 35px lime, 0 0 40px lime, 0 0 50px lime, 0 0 75px lime;
-        }
+
+            }
         .wrap :last-child {
                 margin-right: 0px;/*Убираем поле последнего div-а*/
         }
@@ -117,9 +147,10 @@
 <body>
     <main>
         <article>
-            <header class="flex-container">
-                <h1>Автоматизированные системы обработки информации и управления</h1>
-                <div>Программа подготовки бакалавриата ИРНИТУ по направлению 09.03.01</div>
+            <header>
+                <h1>
+                    Автоматизированные системы обработки информации и управления
+                </h1>
             </header>
             <section>
                 <h2>Краткие сведения об образовательной программе</h2>
@@ -161,8 +192,8 @@
                 </ul>
             </section>
             <section>
-                <div class="wrap" class ="flex-container"> <!--Создаем дополнительную обертку-родительский элемент -->
-                    <h2>Необходимые для поступления предметы</h2>
+                <div class="wrap"> <!--Создаем дополнительную обертку-родительский элемент -->
+
                     <div class="bblock"><a href ="https://inf-ege.sdamgia.ru/">Информатика</a></div>
                     <div class="bblock"><a href ="https://math-ege.sdamgia.ru/">Проф математика</a></div>
                     <div class="bblock"><a href ="https://rus-ege.sdamgia.ru/">Русский язык</a></div>
