@@ -23,6 +23,11 @@
         .a_footer {
             display: flex;
         }
+        .flex-container {
+            /*генерирует flex-контейнер уровня блока*/
+            display: -webkit-flex; 
+            display: flex; 
+        }
         h1 {
             text-align: center;
             padding: 20px 10px 0px 0px;
@@ -109,7 +114,7 @@
 <body>
     <main>
         <article>
-            <header>
+            <header class="flex-container">
                 <h1>Автоматизированные системы обработки информации и управления</h1>
                 <div>Программа подготовки бакалавриата ИРНИТУ по направлению 09.03.01</div>
             </header>
